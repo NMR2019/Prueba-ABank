@@ -1,0 +1,18 @@
+================================= Prueba ABank ===============================================
+
+==========================        DATABASES        ===========================================
+
+- Correr el script de la Base de Datos en PostgresSQL
+- El campo Id se definio autogenerado por una secuencia, por eso se creo usuario_id_seq y se uso DEFAULT     
+  nextval('usuario_id_seq')
+- Se crearon dos función trigger: 
+	1- En INSERT: establece fecha_creacion y fecha_modificacion (si no fueron proporcionadas) a now().
+	2- En UPDATE: actualiza fecha_modificacion a now() automáticamente.
+
+
+==========================        API ABank       ===========================================
+
+- Al levantar el proyecto se utilizo Swagger como interfaz para probar cada End-Point 
+- Para probar los End-Point de CREATE y LOGIN utilizamos Swagger
+- Para probar los End-Point de UPDATE Y DELETE utilizamos Postman ya que necesitamos establecer el TOKEN
+  que nos permite realizar estas acciones.
